@@ -74,7 +74,6 @@
   font-size: 20px;
   color: @carousel-control-color;
   text-align: center;
-  text-shadow: @carousel-text-shadow;
   // We can't have this transition here because webkit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
@@ -146,7 +145,6 @@
     margin: 1px;
     text-indent: -999px;
     border: 1px solid @carousel-indicator-border-color;
-    border-radius: 10px;
     cursor: pointer;
   }
   .active {
@@ -170,10 +168,6 @@
   padding-bottom: 20px;
   color: @carousel-caption-color;
   text-align: center;
-  text-shadow: @carousel-text-shadow;
-  & .btn {
-    text-shadow: none; // No shadow for button elements in carousel-caption
-  }
 }
 
 

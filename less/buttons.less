@@ -18,7 +18,6 @@
   vertical-align: middle;
   cursor: pointer;
   border: 1px solid transparent;
-  border-radius: @border-radius-base;
   white-space: nowrap;
 
   &:focus {
@@ -34,7 +33,6 @@
   &:active,
   &.active {
     outline: 0;
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
   }
 
   &.disabled,
@@ -43,7 +41,6 @@
     cursor: default;
     pointer-events: none; // Future-proof disabling of clicks
     .opacity(.65);
-    .box-shadow(none);
   }
 
 }
@@ -84,14 +81,12 @@
   color: @link-color;
   font-weight: normal;
   cursor: pointer;
-  border-radius: 0;
 
   &,
   &:active,
   &[disabled],
   fieldset[disabled] & {
     background-color: transparent;
-    .box-shadow(none);
   }
   &,
   &:hover,
@@ -122,13 +117,11 @@
 .btn-large {
   padding: @padding-large-vertical @padding-large-horizontal;
   font-size: @font-size-large;
-  border-radius: @border-radius-large;
 }
 .btn-small {
   padding: @padding-small-vertical @padding-small-horizontal;
   font-size: @font-size-small;
   line-height: 1.5; // ensure proper height of button next to small input
-  border-radius: @border-radius-small;
 }
 
 

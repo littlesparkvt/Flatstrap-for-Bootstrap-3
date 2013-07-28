@@ -94,7 +94,6 @@
       margin-right: 2px;
       line-height: @line-height-base;
       border: 1px solid transparent;
-      border-radius: @border-radius-base @border-radius-base 0 0;
       &:hover {
         border-color: @nav-tabs-link-hover-border-color;
       }
@@ -128,9 +127,6 @@
     float: left;
 
     // Links rendered as pills
-    > a {
-      border-radius: 5px;
-    }
     + li {
       margin-left: 2px;
     }
@@ -233,5 +229,4 @@
   // make dropdown border overlap tab border
   margin-top: -1px;
   // Remove the top rounded corners here since there is a hard edge above the menu
-  .border-top-radius(0);
 }

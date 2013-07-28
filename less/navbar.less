@@ -10,7 +10,6 @@
   padding-left: @navbar-padding-horizontal;
   padding-right: @navbar-padding-horizontal;
   background-color: @navbar-bg;
-  border-radius: @border-radius-base;
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -29,7 +28,6 @@
     padding-bottom: ((@navbar-height - @line-height-computed) / 2);
     color: @navbar-link-color;
     line-height: 20px;
-    border-radius: @border-radius-base;
     &:hover,
     &:focus {
       color: @navbar-link-hover-color;
@@ -66,11 +64,6 @@
 // Navbar alignment options
 // --------------------------------------------------
 
-// Static navbar
-.navbar-static-top {
-  border-radius: 0;
-}
-
 // Fix the top/bottom navbars when screen real estate supports it
 .navbar-fixed-top,
 .navbar-fixed-bottom {
@@ -78,7 +71,6 @@
   right: 0;
   left: 0;
   z-index: @zindex-navbar-fixed;
-  border-radius: 0;
 }
 .navbar-fixed-top {
   top: 0;
@@ -124,7 +116,6 @@
   padding: 8px 12px;
   background-color: transparent;
   border: 1px solid @navbar-toggle-border-color;
-  border-radius: @border-radius-base;
 
   &:hover,
   &:focus {
@@ -137,7 +128,6 @@
     width: 22px;
     height: 2px;
     background-color: @navbar-toggle-icon-bar-bg;
-    border-radius: 1px;
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
@@ -155,13 +145,6 @@
 // Menu position and menu carets
 .navbar-nav > li > .dropdown-menu {
   margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-}
-// Menu position and menu caret support for dropups via extra dropup class
-.navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 // Dropdown menu items and carets
@@ -311,9 +294,6 @@
 
     > li {
       float: left;
-      > a {
-        border-radius: 0;
-      }
     }
 
     &.pull-right {
