@@ -1,6 +1,6 @@
 # [Flatstrap for Bootstrap v3.0.0RC1](http://www.flatstrap.org)
 
-##This is a release canidate, not for production use.
+##This is a release candidate, not for production use.
 
 
 ***Sometimes a project doesn't need rounded corners or drop shadows. That's why we ripped all of them out of Bootstrap.***
