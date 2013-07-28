@@ -232,9 +232,7 @@ body {
   margin-bottom: 30px;
   padding-top:    10px;
   padding-bottom: 10px;
-  text-shadow: 0 1px 0 #fff;
   background-color: #f7f5fa;
-  border-radius: 5px;
 }
 
 /* All levels of nav */
@@ -337,7 +335,6 @@ body {
   padding: 45px 15px 15px;
   margin: 0 -15px -1px;
   background-color: #fafafa;
-  box-shadow: inset 0 3px 6px rgba(0,0,0,.05);
   border-color: #e5e5e5 #eee #eee;
   border-style: solid;
   border-width: 1px 0;
@@ -359,8 +356,6 @@ body {
 .bs-example + .prettyprint,
 .bs-example + .highlight {
   margin-top: 0;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 /* Tweak content of examples for optimum awesome */
@@ -449,23 +444,6 @@ body {
 }
 .bs-navbar-bottom-example .navbar-fixed-bottom {
   bottom: -1px;
-}
-.bs-navbar-top-example {
-  -webkit-border-radius: 0 0 4px 4px;
-     -moz-border-radius: 0 0 4px 4px;
-          border-radius: 0 0 4px 4px;
-}
-.bs-navbar-top-example:after {
-  top: auto;
-  bottom: 15px;
-  -webkit-border-radius: 0 4px 0 4px;
-     -moz-border-radius: 0 4px 0 4px;
-          border-radius: 0 4px 0 4px;
-}
-.bs-navbar-bottom-example {
-  -webkit-border-radius: 4px 4px 0 0;
-     -moz-border-radius: 4px 4px 0 0;
-          border-radius: 4px 4px 0 0;
 }
 .bs-navbar-bottom-example .navbar {
   margin-bottom: 0;
@@ -627,7 +605,6 @@ body {
   font-weight: bold;
   line-height: 1.1;
   text-align: center;
-  border-radius: 4px;
 }
 .responsive-utilities-test.visible-on [class*="hidden"],
 .responsive-utilities-test.hidden-on [class*="visible"] {
@@ -703,8 +680,6 @@ input.focused {
   border-color: rgba(82,168,236,.8);
   outline: 0;
   outline: thin dotted \9; /* IE6-9 */
-  -moz-box-shadow: 0 0 8px rgba(82,168,236,.6);
-       box-shadow: 0 0 8px rgba(82,168,236,.6);
 }
 
 /* Scrollspy demo on fixed height div */
@@ -720,7 +695,6 @@ input.focused {
   margin-bottom: 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
-  border-radius: 4px;
 }
 .highlight pre {
   padding: 0;
@@ -776,7 +750,6 @@ input.focused {
     font-weight: 500;
     color: #999;
     background-color: #eee;
-    border-radius: 4px;
   }
   .bs-top:hover {
     color: #fff;
@@ -803,14 +776,11 @@ input.focused {
     background-color: #fff;
     border-width: 1px;
     border-color: #ddd;
-    border-radius: 4px 4px 0 0;
-    box-shadow: none;
   }
 
   .carbonad {
     margin: 0 !important;
     border: 1px solid #e5e5e5 !important;
-    border-radius: 4px;
   }
 
   /* Show the docs nav */
