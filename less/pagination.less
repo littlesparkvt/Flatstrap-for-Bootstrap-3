@@ -5,8 +5,7 @@
   display: inline-block;
   padding-left: 0;
   margin: @line-height-computed 0;
-  border-radius: @border-radius-base;
-  
+
   > li {
     display: inline; // Remove list-style and block-level defaults
     > a,
@@ -23,17 +22,10 @@
       > a,
       > span {
         border-left-width: 1px;
-        .border-left-radius(@border-radius-base);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius-base);
       }
     }
   }
-  
+
   > li > a:hover,
   > li > a:focus,
   > .active > a,
@@ -45,7 +37,7 @@
     color: @pagination-active-color;
     cursor: default;
   }
-  
+
   > .disabled {
     > span,
     > a,
@@ -69,18 +61,6 @@
       padding: @padding-large-vertical @padding-large-horizontal;
       font-size: @font-size-large;
     }
-    &:first-child {
-      > a,
-      > span {
-        .border-left-radius(@border-radius-large);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius-large);
-      }
-    }
   }
 }
 
@@ -91,18 +71,6 @@
     > span {
       padding: @padding-small-vertical @padding-small-horizontal;
       font-size: @font-size-small;
-    }
-    &:first-child {
-      > a,
-      > span {
-        .border-left-radius(@border-radius-small);
-      }
-    }
-    &:last-child {
-      > a,
-      > span {
-        .border-right-radius(@border-radius-small);
-      }
     }
   }
 }
