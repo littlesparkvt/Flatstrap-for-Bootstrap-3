@@ -69,24 +69,23 @@
   top: 0;
   left: 0;
   bottom: 0;
-  width: 15%;
-  .opacity(.5);
-  font-size: 20px;
+  width: @carousel-control-width;
+  .opacity(@carousel-control-opacity);
+  font-size: @carousel-control-font-size;
   color: @carousel-control-color;
   text-align: center;
+  text-shadow: @carousel-text-shadow;
   // We can't have this transition here because webkit cancels the carousel
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
   &.left {
     #gradient > .horizontal(@start-color: rgba(0,0,0,.5); @end-color: rgba(0,0,0,.0001));
-    background-color: transparent;
   }
   &.right {
     left: auto;
     right: 0;
     #gradient > .horizontal(@start-color: rgba(0,0,0,.0001); @end-color: rgba(0,0,0,.5));
-    background-color: transparent;
   }
 
   // Hover/focus state
@@ -98,21 +97,32 @@
   }
 
   // Toggles
-  .glyphicon,
   .icon-prev,
-  .icon-next {
+  .icon-next,
+  .glyphicon-chevron-left,
+  .glyphicon-chevron-right {
     position: absolute;
     top: 50%;
-    left: 50%;
     z-index: 5;
     display: inline-block;
+  }
+  .icon-prev,
+  .glyphicon-chevron-left {
+    left: 50%;
+  }
+  .icon-next,
+  .glyphicon-chevron-right {
+    right: 50%;
+  }
+  .icon-prev,
+  .icon-next {
     width:  20px;
     height: 20px;
     margin-top: -10px;
     margin-left: -10px;
     font-family: serif;
   }
-  // Non-glyphicon toggles
+
   .icon-prev {
     &:before {
       content: '\2039';// SINGLE LEFT-POINTING ANGLE QUOTATION MARK (U+2039)
@@ -126,14 +136,17 @@
 }
 
 // Optional indicator pips
-// -----------------------------
+//
+// Add an unordered list with the following class and add a list item for each
+// slide your carousel holds.
+
 .carousel-indicators {
   position: absolute;
   bottom: 10px;
   left: 50%;
   z-index: 15;
-  width: 120px;
-  margin-left: -60px;
+  width: 60%;
+  margin-left: -30%;
   padding-left: 0;
   list-style: none;
   text-align: center;
@@ -145,6 +158,7 @@
     margin: 1px;
     text-indent: -999px;
     border: 1px solid @carousel-indicator-border-color;
+    border-radius: 10px;
     cursor: pointer;
   }
   .active {
@@ -168,21 +182,28 @@
   padding-bottom: 20px;
   color: @carousel-caption-color;
   text-align: center;
+  text-shadow: @carousel-text-shadow;
+  & .btn {
+    text-shadow: none; // No shadow for button elements in carousel-caption
+  }
 }
 
 
 // Scale up controls for tablets and up
-@media screen and (min-width: @screen-tablet) {
+@media screen and (min-width: @screen-sm-min) {
 
   // Scale up the controls a smidge
-  .carousel-control .glyphicon,
-  .carousel-control .icon-prev,
-  .carousel-control .icon-next {
-    width: 30px;
-    height: 30px;
-    margin-top: -15px;
-    margin-left: -15px;
-    font-size: 30px;
+  .carousel-control {
+    .glyphicons-chevron-left,
+    .glyphicons-chevron-right,
+    .icon-prev,
+    .icon-next {
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+      margin-left: -15px;
+      font-size: 30px;
+    }
   }
 
   // Show and left align the captions
