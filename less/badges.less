@@ -16,7 +16,6 @@
   white-space: nowrap;
   text-align: center;
   background-color: @badge-bg;
-  border-radius: @badge-border-radius;
 
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
@@ -47,5 +46,5 @@ a.list-group-item.active > .badge,
   background-color: @badge-active-bg;
 }
 .nav-pills > li > a > .badge {
-  margin-left: 3px;
+  .margin-left(3px);
 }

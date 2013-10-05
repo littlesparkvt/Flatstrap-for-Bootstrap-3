@@ -1,10 +1,11 @@
-# [Bootstrap](http://getbootstrap.com) [![Build Status](https://secure.travis-ci.org/twbs/bootstrap.png)](http://travis-ci.org/twbs/bootstrap) [![devDependency Status](https://david-dm.org/twbs/bootstrap/dev-status.png)](https://david-dm.org/twbs/bootstrap#info=devDependencies)
+# [Flatstrap 3](http://getbootstrap.com) [![Build Status](https://secure.travis-ci.org/twbs/bootstrap.png)](http://travis-ci.org/twbs/bootstrap) [![devDependency Status](https://david-dm.org/littlesparkvt/Flatstrap-for-Bootstrap-3/dev-status.png)](https://david-dm.org/littlesparkvt/Flatstrap-for-Bootstrap-3#info=devDependencies)
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
+Sometimes a project doesn't need gradients and drop shadows. We got rid of them.
+
+Flatstrap supports [bi-app-less](https://github.com/anasnakawa/bi-app-less)
+To switch to RTL version just change the value of `@text-direction` to `rtl`.
 
 To get started, check out [http://getbootstrap.com](http://getbootstrap.com)!
-
-
 
 ## Quick start
 

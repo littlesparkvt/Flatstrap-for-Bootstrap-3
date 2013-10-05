@@ -12,26 +12,9 @@
 // Buttons
 // --------------------------------------------------
 
-// Common styles
-.btn-default,
-.btn-primary,
-.btn-success,
-.btn-info,
-.btn-warning,
-.btn-danger {
-  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
-
-  // Reset the shadow
-  &:active,
-  &.active {
-    .box-shadow(inset 0 3px 5px rgba(0,0,0,.125));
-  }
-}
 
 // Mixin for generating new styles
-.btn-styles(@btn-color: #555) {
+.btn-styles(@btn-color: #555;) {
   #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
   background-repeat: repeat-x;
   border-color: darken(@btn-color, 14%);
@@ -59,7 +42,7 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); text-shadow: 0 1px 0 #fff; border-color: #ccc; }
+.btn-default { .btn-styles(@btn-default-bg); }
 .btn-primary { .btn-styles(@btn-primary-bg); }
 .btn-success { .btn-styles(@btn-success-bg); }
 .btn-warning { .btn-styles(@btn-warning-bg); }
@@ -72,10 +55,6 @@
 // Images
 // --------------------------------------------------
 
-.thumbnail,
-.img-thumbnail {
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
 
 
 
@@ -104,18 +83,10 @@
 // Default navbar
 .navbar-default {
   #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
-  border-radius: @navbar-border-radius;
-  @shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 5px rgba(0,0,0,.075);
-  .box-shadow(@shadow);
 
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: darken(@navbar-default-bg, 5%); @end-color: darken(@navbar-default-bg, 2%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.075));
   }
-}
-.navbar-brand,
-.navbar-nav > li > a {
-  text-shadow: 0 1px 0 rgba(255,255,255,.25);
 }
 
 // Inverted navbar
@@ -124,21 +95,10 @@
 
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: @navbar-inverse-bg; @end-color: lighten(@navbar-inverse-bg, 2.5%));
-    .box-shadow(inset 0 3px 9px rgba(0,0,0,.25));
   }
 
-  .navbar-brand,
-  .navbar-nav > li > a {
-    text-shadow: 0 -1px 0 rgba(0,0,0,.25);
-  }
 }
 
-// Undo rounded corners in static and fixed navbars
-.navbar-static-top,
-.navbar-fixed-top,
-.navbar-fixed-bottom {
-  border-radius: 0;
-}
 
 
 
@@ -146,12 +106,6 @@
 // Alerts
 // --------------------------------------------------
 
-// Common styles
-.alert {
-  text-shadow: 0 1px 0 rgba(255,255,255,.2);
-  @shadow: inset 0 1px 0 rgba(255,255,255,.25), 0 1px 2px rgba(0,0,0,.05);
-  .box-shadow(@shadow);
-}
 
 // Mixin for generating new styles
 .alert-styles(@color) {
@@ -194,14 +148,9 @@
 // List groups
 // --------------------------------------------------
 
-.list-group {
-  border-radius: @border-radius-base;
-  .box-shadow(0 1px 2px rgba(0,0,0,.075));
-}
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
-  text-shadow: 0 -1px 0 darken(@list-group-active-bg, 10%);
   #gradient > .vertical(@start-color: @list-group-active-bg; @end-color: darken(@list-group-active-bg, 7.5%));
   border-color: darken(@list-group-active-border, 7.5%);
 }
@@ -212,10 +161,6 @@
 // Panels
 // --------------------------------------------------
 
-// Common styles
-.panel {
-  .box-shadow(0 1px 2px rgba(0,0,0,.05));
-}
 
 // Mixin for generating new styles
 .panel-heading-styles(@color) {
@@ -239,6 +184,4 @@
 .well {
   #gradient > .vertical(@start-color: darken(@well-bg, 5%); @end-color: @well-bg);
   border-color: darken(@well-bg, 10%);
-  @shadow: inset 0 1px 3px rgba(0,0,0,.05), 0 1px 0 rgba(255,255,255,.1);
-  .box-shadow(@shadow);
 }

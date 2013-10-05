@@ -8,8 +8,6 @@
   margin-bottom: @line-height-computed;
   background-color: @panel-bg;
   border: 1px solid transparent;
-  border-radius: @panel-border-radius;
-  .box-shadow(0 1px 1px rgba(0,0,0,.05));
 }
 
 // Panel contents
@@ -31,14 +29,6 @@
     .list-group-item {
       border-width: 1px 0;
 
-      // Remove border radius for top one
-      &:first-child {
-        .border-top-radius(0);
-      }
-      // But keep it for the last one
-      &:last-child {
-        border-bottom: 0;
-      }
     }
   }
 }
@@ -73,11 +63,11 @@
       > tr {
         > th:first-child,
         > td:first-child {
-          border-left: 0;
+          .border-left(0);
         }
         > th:last-child,
         > td:last-child {
-          border-right: 0;
+          .border-right(0);
         }
 
         &:last-child > th,
@@ -94,7 +84,6 @@
 .panel-heading {
   padding: 10px 15px;
   border-bottom: 1px solid transparent;
-  .border-top-radius(@panel-border-radius - 1);
 }
 
 // Within heading, strip any `h*` tag of it's default margins for spacing.
@@ -112,7 +101,6 @@
   padding: 10px 15px;
   background-color: @panel-footer-bg;
   border-top: 1px solid @panel-inner-border;
-  .border-bottom-radius(@panel-border-radius - 1);
 }
 
 
@@ -125,7 +113,6 @@
   // Tighten up margin so it's only between panels
   .panel {
     margin-bottom: 0;
-    border-radius: @panel-border-radius;
     overflow: hidden; // crop contents when collapsed
     + .panel {
       margin-top: 5px;
