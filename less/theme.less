@@ -12,10 +12,10 @@
 // Buttons
 // --------------------------------------------------
 
-
 // Mixin for generating new styles
-.btn-styles(@btn-color: #555;) {
+.btn-styles(@btn-color: #555) {
   #gradient > .vertical(@start-color: @btn-color; @end-color: darken(@btn-color, 12%));
+  .reset-filter(); // Disable gradients for IE9 because filter bleeds through rounded corners
   background-repeat: repeat-x;
   border-color: darken(@btn-color, 14%);
 
@@ -42,19 +42,12 @@
 }
 
 // Apply the mixin to the buttons
-.btn-default { .btn-styles(@btn-default-bg); }
+.btn-default { .btn-styles(@btn-default-bg); border-color: #ccc; }
 .btn-primary { .btn-styles(@btn-primary-bg); }
 .btn-success { .btn-styles(@btn-success-bg); }
 .btn-warning { .btn-styles(@btn-warning-bg); }
 .btn-danger  { .btn-styles(@btn-danger-bg); }
 .btn-info    { .btn-styles(@btn-info-bg); }
-
-
-
-//
-// Images
-// --------------------------------------------------
-
 
 
 
@@ -83,6 +76,8 @@
 // Default navbar
 .navbar-default {
   #gradient > .vertical(@start-color: lighten(@navbar-default-bg, 10%); @end-color: @navbar-default-bg);
+  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
+  border-radius: @navbar-border-radius;
 
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: darken(@navbar-default-bg, 5%); @end-color: darken(@navbar-default-bg, 2%));
@@ -92,20 +87,25 @@
 // Inverted navbar
 .navbar-inverse {
   #gradient > .vertical(@start-color: lighten(@navbar-inverse-bg, 10%); @end-color: @navbar-inverse-bg);
+  .reset-filter(); // Remove gradient in IE<10 to fix bug where dropdowns don't get triggered
 
   .navbar-nav > .active > a {
     #gradient > .vertical(@start-color: @navbar-inverse-bg; @end-color: lighten(@navbar-inverse-bg, 2.5%));
   }
-
 }
 
+// Undo rounded corners in static and fixed navbars
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+  border-radius: 0;
+}
 
 
 
 //
 // Alerts
 // --------------------------------------------------
-
 
 // Mixin for generating new styles
 .alert-styles(@color) {
@@ -148,6 +148,9 @@
 // List groups
 // --------------------------------------------------
 
+.list-group {
+  border-radius: @border-radius-base;
+}
 .list-group-item.active,
 .list-group-item.active:hover,
 .list-group-item.active:focus {
@@ -160,7 +163,6 @@
 //
 // Panels
 // --------------------------------------------------
-
 
 // Mixin for generating new styles
 .panel-heading-styles(@color) {

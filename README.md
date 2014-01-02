@@ -2,18 +2,29 @@
 
 Sometimes a project doesn't need gradients and drop shadows. We got rid of them.
 
-Flatstrap supports [bi-app-less](https://github.com/anasnakawa/bi-app-less)
-To switch to RTL version just change the value of `@text-direction` to `rtl`.
+Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development
 
-To get started, check out [http://getbootstrap.com](http://getbootstrap.com)!
+To get started, check out <http://www.flatstrap.org>!
+
+## Table of contents
+
+ - [Quick start](#quick-start)
+ - [Bugs and feature requests](#bugs-and-feature-requests)
+ - [Documentation](#documentation)
+ - [Compiling CSS and JavaScript](#compiling-css-and-javascript)
+ - [Contributing](#contributing)
+ - [Community](#community)
+ - [Versioning](#versioning)
+ - [Authors](#authors)
+ - [Copyright and license](#copyright-and-license)
 
 ## Quick start
 
 Three quick start options are available:
 
-* [Download the latest release](https://github.com/twbs/bootstrap/releases/tag/v3.0.0).
-* Clone the repo: `git clone git://github.com/twbs/bootstrap.git`.
-* Install with [Bower](http://bower.io): `bower install bootstrap`.
+- [Download the latest release](https://github.com/littlesparkvt/Flatstrap-for-Bootstrap-3/archive/master.zip).
+- Clone the repo: `git clone https://github.com/littlesparkvt/Flatstrap-for-Bootstrap-3.git`.
+- Install with [Bower](http://bower.io): `bower install https://github.com/littlesparkvt/Flatstrap-for-Bootstrap-3.git`.
 
 Read the [Getting Started page](http://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
 
@@ -44,28 +55,26 @@ We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified
 
 ## Bugs and feature requests
 
-Have a bug or a feature request? [Please open a new issue](https://github.com/twbs/bootstrap/issues). Before opening any issue, please search for existing issues and read the [Issue Guidelines](https://github.com/necolas/issue-guidelines), written by [Nicolas Gallagher](https://github.com/necolas/).
-
-You may use [this JS Bin](http://jsbin.com/aKiCIDO/1/edit) as a template for your bug reports.
-
+Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues.  If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
 
 
 ## Documentation
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at [http://getbootstrap.com](http://getbootstrap.com). The docs may also be run locally.
+Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](http://jekyllrb.com) and publicly hosted on GitHub Pages at <http://getbootstrap.com>. The docs may also be run locally.
 
 ### Running documentation locally
 
 1. If necessary, [install Jekyll](http://jekyllrb.com/docs/installation) (requires v1.x).
+  - **Windows users:** read [this unofficial guide](https://github.com/juthilo/run-jekyll-on-windows/) to get Jekyll up and running without problems.
 2. From the root `/bootstrap` directory, run `jekyll serve` in the command line.
-  - **Windows users:** run `chcp 65001` first to change the command prompt's character encoding ([code page](http://en.wikipedia.org/wiki/Windows_code_page)) to UTF-8 so Jekyll runs without errors.
-3. Open [http://localhost:9001](http://localhost:9001) in your browser, and voilà.
+  - **Windows users:** For Ruby 2.0.0 run `chcp 65001` first to change the command prompt's character encoding ([code page](http://en.wikipedia.org/wiki/Windows_code_page)) to UTF-8 so Jekyll runs without errors. For Ruby 1.9.3 you can alternatively do `SET LANG=en_EN.UTF-8`. In addition, ensure you have Python installed and added in your `PATH` or the build will fail due to our Pygments dependency.
+3. Open <http://localhost:9001> in your browser, and voilà.
 
 Learn more about using Jekyll by reading its [documentation](http://jekyllrb.com/docs/home/).
 
 ### Documentation for previous releases
 
-Documentation for v2.3.2 has been made available for the time being at [http://getbootstrap.com/2.3.2/](http://getbootstrap.com/2.3.2/) while folks transition to Bootstrap 3.
+Documentation for v2.3.2 has been made available for the time being at <http://getbootstrap.com/2.3.2/> while folks transition to Bootstrap 3.
 
 [Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
 
@@ -89,10 +98,10 @@ When completed, you'll be able to run the various Grunt commands provided from t
 ### Available Grunt commands
 
 #### Build - `grunt`
-Run `grunt` to run tests locally and compile the CSS and JavaScript into `/dist`. **Uses [recess](http://twitter.github.io/recess/) and [UglifyJS](http://lisperator.net/uglifyjs/).**
+Run `grunt` to run tests locally and compile the CSS and JavaScript into `/dist`. **Uses [Less](http://lesscss.org/) and [UglifyJS](http://lisperator.net/uglifyjs/).**
 
 #### Only compile CSS and JavaScript - `grunt dist`
-`grunt dist` creates the `/dist` directory with compiled files. **Uses [recess](http://twitter.github.io/recess/) and [UglifyJS](http://lisperator.net/uglifyjs/).**
+`grunt dist` creates the `/dist` directory with compiled files. **Uses [Less](http://lesscss.org/) and [UglifyJS](http://lisperator.net/uglifyjs/).**
 
 #### Tests - `grunt test`
 Runs [JSHint](http://jshint.com) and [QUnit](http://qunitjs.com/) tests headlessly in [PhantomJS](http://phantomjs.org/) (used for CI).
@@ -112,7 +121,7 @@ Please read through our [contributing guidelines](https://github.com/twbs/bootst
 
 More over, if your pull request contains JavaScript patches or features, you must include relevant unit tests. All HTML and CSS should conform to the [Code Guide](http://github.com/mdo/code-guide), maintained by [Mark Otto](http://github.com/mdo).
 
-Editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at [http://editorconfig.org](http://editorconfig.org).
+Editor preferences are available in the [editor config](.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
 
 
 
@@ -120,17 +129,17 @@ Editor preferences are available in the [editor config](.editorconfig) for easy 
 
 Keep track of development and community news.
 
-* Follow [@twbootstrap on Twitter](http://twitter.com/twbootstrap).
-* Read and subscribe to the [The Official Bootstrap Blog](http://blog.getbootstrap.com).
-* Have a question that's not a feature request or bug report? [Ask on the mailing list.](http://groups.google.com/group/twitter-bootstrap)
-* Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##twitter-bootstrap` channel.
+- Follow [@twbootstrap on Twitter](http://twitter.com/twbootstrap).
+- Read and subscribe to [The Official Bootstrap Blog](http://blog.getbootstrap.com).
+- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##twitter-bootstrap` channel.
+- Implementation help may be found at Stack Overflow (tagged [`twitter-bootstrap`](http://stackoverflow.com/questions/tagged/twitter-bootstrap)).
 
 
 
 
 ## Versioning
 
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
+For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under the Semantic Versioning guidelines. Sometimes we screw up, but we'll adhere to these rules whenever possible.
 
 Releases will be numbered with the following format:
 
@@ -138,11 +147,11 @@ Releases will be numbered with the following format:
 
 And constructed with the following guidelines:
 
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
+- Breaking backward compatibility **bumps the major** while resetting minor and patch
+- New additions without breaking backward compatibility **bumps the minor** while resetting the patch
+- Bug fixes and misc changes **bumps only the patch**
 
-For more information on SemVer, please visit [http://semver.org/](http://semver.org/).
+For more information on SemVer, please visit <http://semver.org/>.
 
 
 
@@ -150,16 +159,26 @@ For more information on SemVer, please visit [http://semver.org/](http://semver.
 
 **Mark Otto**
 
-+ [http://twitter.com/mdo](http://twitter.com/mdo)
-+ [http://github.com/mdo](http://github.com/mdo)
+- <http://twitter.com/mdo>
+- <http://github.com/mdo>
 
 **Jacob Thornton**
 
-+ [http://twitter.com/fat](http://twitter.com/fat)
-+ [http://github.com/fat](http://github.com/fat)
+- <http://twitter.com/fat>
+- <http://github.com/fat>
+
+**William**
+
+- <http://twitter.com/littlesparkvt>
+- <http://github.com/littlesparkvt>
+
+**Zero**
+
+- <http://twitter.com/izer0x>
+- <http://github.com/izer0x>
 
 
 
 ## Copyright and license
 
-Copyright 2013 Twitter, Inc under [the Apache 2.0 license](LICENSE).
+Copyright 2013 Twitter, Inc under [the MIT license](LICENSE).

@@ -16,10 +16,17 @@
   white-space: nowrap;
   text-align: center;
   background-color: @badge-bg;
+  border-radius: @badge-border-radius;
 
   // Empty badges collapse automatically (not available in IE8)
   &:empty {
     display: none;
+  }
+
+  // Quick fix for badges in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
   }
 }
 
@@ -33,12 +40,6 @@ a.badge {
   }
 }
 
-// Quick fix for labels/badges in buttons
-.btn .badge {
-  position: relative;
-  top: -1px;
-}
-
 // Account for counters in navs
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
@@ -46,5 +47,5 @@ a.list-group-item.active > .badge,
   background-color: @badge-active-bg;
 }
 .nav-pills > li > a > .badge {
-  .margin-left(3px);
+  margin-left: 3px;
 }

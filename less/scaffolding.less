@@ -25,7 +25,6 @@ body {
   line-height: @line-height-base;
   color: @text-color;
   background-color: @body-bg;
-  direction: @text-direction;
 }
 
 // Reset fonts for relevant elements
@@ -81,6 +80,7 @@ img {
   line-height: @line-height-base;
   background-color: @thumbnail-bg;
   border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
   .transition(all .2s ease-in-out);
 
   // Keep them at most 100% wide
@@ -114,6 +114,6 @@ hr {
   margin: -1px;
   padding: 0;
   overflow: hidden;
-  clip: rect(0 0 0 0);
+  clip: rect(0,0,0,0);
   border: 0;
 }

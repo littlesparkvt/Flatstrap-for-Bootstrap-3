@@ -3,26 +3,35 @@
 // --------------------------------------------------
 .pagination {
   display: inline-block;
-  .padding-left(0);
+  padding-left: 0;
   margin: @line-height-computed 0;
+  border-radius: @border-radius-base;
 
   > li {
     display: inline; // Remove list-style and block-level defaults
     > a,
     > span {
       position: relative;
-      .float(left); // Collapse white-space
+      float: left; // Collapse white-space
       padding: @padding-base-vertical @padding-base-horizontal;
       line-height: @line-height-base;
       text-decoration: none;
+      color: @pagination-color;
       background-color: @pagination-bg;
       border: 1px solid @pagination-border;
-      .margin-left(-1px);
+      margin-left: -1px;
     }
     &:first-child {
       > a,
       > span {
-        .margin-left(0);
+        margin-left: 0;
+        .border-left-radius(@border-radius-base);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        .border-right-radius(@border-radius-base);
       }
     }
   }
@@ -31,7 +40,9 @@
   > li > span {
     &:hover,
     &:focus {
+      color: @pagination-hover-color;
       background-color: @pagination-hover-bg;
+      border-color: @pagination-hover-border;
     }
   }
 
@@ -43,7 +54,7 @@
       z-index: 2;
       color: @pagination-active-color;
       background-color: @pagination-active-bg;
-      border-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
       cursor: default;
     }
   }
@@ -56,8 +67,8 @@
     > a:hover,
     > a:focus {
       color: @pagination-disabled-color;
-      background-color: @pagination-bg;
-      border-color: @pagination-border;
+      background-color: @pagination-disabled-bg;
+      border-color: @pagination-disabled-border;
       cursor: not-allowed;
     }
   }
